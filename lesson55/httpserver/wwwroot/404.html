@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - 页面未找到</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .error-container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+      width: 100%;
+      backdrop-filter: blur(10px);
+    }
+
+    .error-code {
+      font-size: 120px;
+      font-weight: 800;
+      color: #667eea;
+      line-height: 1;
+      margin-bottom: 10px;
+      text-shadow: 3px 3px 0 rgba(102, 126, 234, 0.2);
+    }
+
+    .error-title {
+      font-size: 28px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .error-message {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .home-button {
+      display: inline-block;
+      padding: 14px 35px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+      border: none;
+      cursor: pointer;
+    }
+
+    .home-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+    }
+
+    .home-button:active {
+      transform: translateY(0);
+    }
+
+    .search-suggestion {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #999;
+    }
+
+    .search-suggestion a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .search-suggestion a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .error-code {
+        font-size: 100px;
+      }
+      
+      .error-title {
+        font-size: 24px;
+      }
+      
+      .error-container {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <div class="error-code">404</div>
+    <div class="error-title">页面迷路了</div>
+    <div class="error-message">
+      抱歉，您要访问的页面不存在或已被移除。<br>
+      请检查网址是否正确，或返回首页继续浏览。
+    </div>
+    
+    <a href="/" class="home-button">返回首页</a>
+    
+    <div class="search-suggestion">
+      或者 <a href="/search">搜索</a> 您想要的内容
+    </div>
+  </div>
+
+  <script>
+    // 简单的控制台提示
+    console.log('404 - 页面未找到，已自动记录本次访问');
+    
+    // 可选：记录404错误（如果需要上报服务器）
+    if (window.location.pathname !== '/') {
+      console.log('访问的路径:', window.location.pathname);
+    }
+  </script>
+</body>
+</html>
